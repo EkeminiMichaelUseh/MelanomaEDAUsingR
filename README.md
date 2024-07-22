@@ -1,13 +1,13 @@
 # Exploratory Data Analysis Using R
 # “Survival from malignant melanoma” Dataset
 ## Table of Contents
-- [1. Introduction](#1.-introduction)
-- [2. Data cleaning](#2.-data-cleaning)
-- [3. Summary statistics](#3.-summary-statistics)
-- [4. Correlation and Regression Analysis](#4.-correlation-and-regression-analysis)
-- [5. Two sample significance test grouped by sex](#5.-two-sample-significance-test-grouped-by-sex)
-- [6. Observations](#6.-observations)
-- [7. Recommendations](#7.-recommendations)
+- [Introduction](#introduction)
+- [Data cleaning](#data-cleaning)
+- [Summary statistics](#summary-statistics)
+- [Correlation and Regression Analysis](#correlation-and-regression-analysis)
+- [Two sample significance test grouped by sex](#two-sample-significance-test-grouped-by-sex)
+- [Observations](#observations)
+- [Recommendations](#recommendations)
 - [References](#references)
 ## 1. Introduction
 This report presents the exploratory data analysis of the “Survival from malignant melanoma” data set using R (R Core Team. 2020). It is the measurements recorded on patients with malignant melanoma whose tumors were removed at the Department of Plastic Surgery, University Hospital of Odense, Denmark. This procedure was done through surgery and the records were kept from 1962 to 1977.
