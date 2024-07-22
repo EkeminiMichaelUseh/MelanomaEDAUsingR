@@ -189,11 +189,11 @@ Extracting records of patients with no ulcerations
 - A scatterplot of the relationship between time and thickness
   ```r
   plot(melanoma_df$thickness, melanoma_df$time,
-       main = "A scatterplot of survivl time Vs tumour thickness",
+       main = "A scatterplot of survival time Vs tumour thickness",
        xlab = "Tumour thickness (mm)",
        ylab = "Time (days)")
   ```
-  ![image](https://github.com/user-attachments/assets/60ba16f9-e6ef-48af-b184-bef1234c6a0a)
+  ![image](https://github.com/user-attachments/assets/39fad07b-1f22-4264-88d2-8fdaccda28ff)
 
 - Regression Analysis
   ```r
@@ -216,11 +216,11 @@ Extracting records of patients with no ulcerations
 - A scatterplot of the relationship between time and age
   ```r
   plot(melanoma_df$age, melanoma_df$time,
-     main = "A scatterplot of survivl time Vs patient's age",
+     main = "A scatterplot of survival time Vs patient's age",
      xlab = "Age (in years)",
      ylab = "Time (days)")
   ```
-  ![image](https://github.com/user-attachments/assets/48afba8e-4329-4cb5-bde5-44a0666e2337)
+  ![image](https://github.com/user-attachments/assets/e40c5874-4948-4003-b72b-c76c7d48952d)
 
 - Regression Analysis
   ```r
