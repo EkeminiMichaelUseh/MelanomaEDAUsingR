@@ -1,6 +1,14 @@
 # Exploratory Data Analysis Using R
 # “Survival from malignant melanoma” Dataset
-
+## Table of Contents
+- [1. Introduction](#1.-introduction)
+- [2. Data cleaning](#2.-data-cleaning)
+- [3. Summary statistics](#3.-summary-statistics)
+- [4. Correlation and Regression Analysis](#4.-correlation-and-regression-analysis)
+- [5. Two sample significance test grouped by sex](#5.-two-sample-significance-test-grouped-by-sex)
+- [6. Observations](#6.-observations)
+- [7. Recommendations](#7.-recommendations)
+- [References](#references)
 ## 1. Introduction
 This report presents the exploratory data analysis of the “Survival from malignant melanoma” data set using R (R Core Team. 2020). It is the measurements recorded on patients with malignant melanoma whose tumors were removed at the Department of Plastic Surgery, University Hospital of Odense, Denmark. This procedure was done through surgery and the records were kept from 1962 to 1977.
 A total of 7 variables were recorded on 205 patients, according to the data provided.
@@ -11,7 +19,7 @@ Importing the data into R is implemented using:
 ```r
 melanoma_df <- read_csv("C:/Users/HP/Documents/statistics_assignment/melanoma.csv")
 ```
-##	2. The data cleaning processes
+##	2. Data cleaning
 - The data was viewed to see what it contains by simply writing
   ```r
   melanoma_df
@@ -36,7 +44,7 @@ melanoma_df <- read_csv("C:/Users/HP/Documents/statistics_assignment/melanoma.cs
   sum(is.na(melanoma_df))
   ```
 
-## 3.	Summary statistics for each of the variables
+## 3.	Summary statistics
 ![image](https://github.com/user-attachments/assets/9abb920c-25b4-4f3a-9e26-27e052fe6f81)
 
 #### Time
@@ -149,7 +157,30 @@ From the ulcer barplot, out of the total patients operated on (205), those with 
 Ulcer is a categorical variable with ‘factor’ as the data type. Therefore, each category's total number of observations is computed as summary statistics.
 Tumor ulcerations absent = 115, Tumor ulcerations present = 90
 
-## 4. Correlation and Regression Analysis of the variables
+Extracting records of patients with no ulcerations
+  ```r
+  absent <- melanoma_df |>
+    filter(ulcer == "Absent")
+  ```
+  Viewing the summary statistics of those with no ulcerations
+  ```r
+  summary(absent$thickness)
+  ```
+  ![image](https://github.com/user-attachments/assets/5929baa2-09d7-4df6-aa02-834be90c7894)
+
+  Extracting records of patients with ulcerations
+  ```r
+  present <- melanoma_df |>
+    filter(ulcer == "Present")
+  ```
+  Viewing the summary statistics of those with ulcerations
+  ```r
+  summary(present$thickness)
+  ```
+  ![image](https://github.com/user-attachments/assets/1009a8bf-60fb-4e77-9b6a-e1cae3b04bff)
+
+
+## 4. Correlation and Regression Analysis
 #### Time ~ Thickness
 - Using Pearson’s correlation, the relationship has a weak negative correlation of -0.2354087. This means as the tumor thickness gets bigger, the smaller the survival time a patient lives after the procedure.
   ```r
@@ -231,7 +262,7 @@ Tumor ulcerations absent = 115, Tumor ulcerations present = 90
   thickness = 0.94105 + 0.03772 age
   here, the y-intercept is 0.94105 when the age is equal to zero. The gradient is 0.03772. For every unit increase in the value of age value, thickness is predicted to increase by 0.03772, on average. The residual          standard error is 2.899 and the R-squared is 0.04515. Due to the unreliability of this model, using it for any predictive analysis of the relationship should be done with caution.
 
-## 5. Two sample significance test (grouped by sex)
+## 5. Two sample significance test grouped by sex
 Using t-test
 Where Ho = Null hypothesis, H1 = alternative hypothesis
 The default level of significance α = 0.05
@@ -302,25 +333,6 @@ The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot rejec
 ## 6. Observations
 - The findings gathered from the data show that malignant melanoma is likely to have ulcerations present depending on its tumor thickness. This implies that a larger tumor thickness is likely ulcerated. The following summary statistics show this:
 
-  Extracting records of patients with no ulcerations
-  ```r
-  absent <- melanoma_df |>
-    filter(ulcer == "Absent")
-  ```
-  Viewing the summary statistics of those with no ulcerations
-  ```r
-  summary(absent$thickness)
-  ```
-  Extracting records of patients with ulcerations
-  ```r
-  present <- melanoma_df |>
-    filter(ulcer == "Present")
-  ```
-  Viewing the summary statistics of those with ulcerations
-  ```r
-  summary(present$thickness)
-  ```
-
   A table to compare their outcomes
   |Summary statistics|Ulcerations present|Ulcerations absent|
   |------------------|-------------------|------------------|
@@ -333,3 +345,14 @@ The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot rejec
 
 - More people survive after getting their melanoma removed which means that fewer people are likely   going to die due to their melanoma.
 - The risk of dying from melanoma increases when the tumor becomes ulcerated due to the increase in thickness of the tumor.
+
+## 7. Recommendations
+People need to seek proper medical care and advice at the sight of any skin infection as it could be melanoma. This will hinder the growth and spread of such infection. The possibility of ulceration, if detected early, will decrease and cured without the risk of fatality.
+
+## References
+- R Core Team. 2020. R: A language and environment for statistics computing. R Foundation for Statistical Computing, Vienna, Austria. “https://www.R-project.org.
+- Arnold, Jeffrey B. 2021. “Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’.” https://CRAN.R-project.org/package=ggthemes.
+- Deanna L. 2020. “Basic R Guide for NSC Statistics.” https://bookdown.org/dli/rguide/r-and-rstudio.html.
+- Wickham, Hadley. 2016. “Ggplot2: Elegant Graphics for Data Analysis.” https://ggplot2.tidyverse.org.
+- Wickham Hadley, Çetinkaya-Rundel Mine, Grolemund Garrett. “R for Data Science (2e).” https://r4ds.hadley.nz/.
+- Wickham Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the Tidyverse” 4: 1686. https://doi.org/10.21105/joss.01686.
