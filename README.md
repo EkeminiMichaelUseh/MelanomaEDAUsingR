@@ -9,7 +9,7 @@
 - [Observations](#observations)
 - [Recommendations](#recommendations)
 - [References](#references)
-## 1. Introduction
+## Introduction
 This report presents the exploratory data analysis of the “Survival from malignant melanoma” data set using R (R Core Team. 2020). It is the measurements recorded on patients with malignant melanoma whose tumors were removed at the Department of Plastic Surgery, University Hospital of Odense, Denmark. This procedure was done through surgery and the records were kept from 1962 to 1977.
 A total of 7 variables were recorded on 205 patients, according to the data provided.
 These variables are:
@@ -19,7 +19,7 @@ Importing the data into R is implemented using:
 ```r
 melanoma_df <- read_csv("C:/Users/HP/Documents/statistics_assignment/melanoma.csv")
 ```
-##	2. Data cleaning
+##	Data cleaning
 - The data was viewed to see what it contains by simply writing
   ```r
   melanoma_df
@@ -44,7 +44,7 @@ melanoma_df <- read_csv("C:/Users/HP/Documents/statistics_assignment/melanoma.cs
   sum(is.na(melanoma_df))
   ```
 
-## 3.	Summary statistics
+## Summary statistics
 ![image](https://github.com/user-attachments/assets/9abb920c-25b4-4f3a-9e26-27e052fe6f81)
 
 #### Time
@@ -180,7 +180,7 @@ Extracting records of patients with no ulcerations
   ![image](https://github.com/user-attachments/assets/1009a8bf-60fb-4e77-9b6a-e1cae3b04bff)
 
 
-## 4. Correlation and Regression Analysis
+## Correlation and Regression Analysis
 #### Time ~ Thickness
 - Using Pearson’s correlation, the relationship has a weak negative correlation of -0.2354087. This means as the tumor thickness gets bigger, the smaller the survival time a patient lives after the procedure.
   ```r
@@ -262,7 +262,7 @@ Extracting records of patients with no ulcerations
   thickness = 0.94105 + 0.03772 age
   here, the y-intercept is 0.94105 when the age is equal to zero. The gradient is 0.03772. For every unit increase in the value of age value, thickness is predicted to increase by 0.03772, on average. The residual          standard error is 2.899 and the R-squared is 0.04515. Due to the unreliability of this model, using it for any predictive analysis of the relationship should be done with caution.
 
-## 5. Two sample significance test grouped by sex
+## Two sample significance test grouped by sex
 Using t-test
 Where Ho = Null hypothesis, H1 = alternative hypothesis
 The default level of significance α = 0.05
@@ -330,7 +330,7 @@ t.test(melanoma_df$age ~ melanoma_df$sex)
 
 The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot reject Ho. We can conclude that there is evidence that the true mean age of patients is the same in male and female.
 
-## 6. Observations
+## Observations
 - The findings gathered from the data show that malignant melanoma is likely to have ulcerations present depending on its tumor thickness. This implies that a larger tumor thickness is likely ulcerated. The following summary statistics show this:
 
   A table to compare their outcomes
@@ -346,7 +346,7 @@ The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot rejec
 - More people survive after getting their melanoma removed which means that fewer people are likely   going to die due to their melanoma.
 - The risk of dying from melanoma increases when the tumor becomes ulcerated due to the increase in thickness of the tumor.
 
-## 7. Recommendations
+## Recommendations
 People need to seek proper medical care and advice at the sight of any skin infection as it could be melanoma. This will hinder the growth and spread of such infection. The possibility of ulceration, if detected early, will decrease and cured without the risk of fatality.
 
 ## References
