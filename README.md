@@ -301,4 +301,35 @@ The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot rejec
 
 ## 6. Observations
 - The findings gathered from the data show that malignant melanoma is likely to have ulcerations present depending on its tumor thickness. This implies that a larger tumor thickness is likely ulcerated. The following summary statistics show this:
-  
+
+  Extracting records of patients with no ulcerations
+  ```r
+  absent <- melanoma_df |>
+    filter(ulcer == "Absent")
+  ```
+  Viewing the summary statistics of those with no ulcerations
+  ```r
+  summary(absent$thickness)
+  ```
+  Extracting records of patients with ulcerations
+  ```r
+  present <- melanoma_df |>
+    filter(ulcer == "Present")
+  ```
+  Viewing the summary statistics of those with ulcerations
+  ```r
+  summary(present$thickness)
+  ```
+
+  A table to compare their outcomes
+  |Summary statistics|Ulcerations present|Ulcerations absent|
+  |------------------|-------------------|------------------|
+  |Min|0.160|0.100|
+  |1st Quatile|2.245|0.650|
+  |Median|3.540|1.290|
+  |Mean|4.336|1.811|
+  |3rd Quatile|5.160|1.940|
+  Max|17.420|14.660|
+
+- More people survive after getting their melanoma removed which means that fewer people are likely   going to die due to their melanoma.
+- The risk of dying from melanoma increases when the tumor becomes ulcerated due to the increase in thickness of the tumor.
