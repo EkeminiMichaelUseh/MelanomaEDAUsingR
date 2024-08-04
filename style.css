@@ -119,7 +119,7 @@ body{
 .dashboard{
     width: 100%;
     height: 250px;
-    background: gray;
+    /* background: gray; */
     object-fit: cover;
 }
 .description{
