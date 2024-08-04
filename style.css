@@ -224,6 +224,9 @@ th, td{
         padding: 0 0 50px 0;
         border-bottom: 1px solid #00000084;
     }
+    .eda img, .summary_pic{
+        width: 60%;
+    }
 }
 @media screen and (min-width: 1200px){
     .navigate{
