@@ -3,9 +3,469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="github_project_icon" href="images/github_projects_icon.png">
     <title>EDAproject</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello</h1>
+    <section id="introduction">
+        <div class="navigate">
+            <a href="https://ekeminimichaeluseh.github.io/ekeminiusehcv/" class="back_to_home">
+                <img src="images/back.png" alt="">
+            </a>
+            <p class="toc_head burger" onclick="showMenu()">Table of Contents</p>
+            <div class="toc" id="navLinks">
+                <img src="images/menu4.png" alt="" class="close-burger" onclick="hideMenu()">
+                <p><a href="#introduction">Introduction</a></p>
+                <p><a href="#data">About Data</a></p>
+                <p><a href="#eda">Data Exploration</a></p>
+                <p><a href="#modev">Correlation and Regression Analysis<br>
+                                T-test</a></p>
+                <p><a href="#resultdis">Observations</a></p>
+                <p><a href="#recolim">Recommendations<br>
+                                Conclusions<br>
+                                Limitations</a></p>
+                <p><a href="#reference">References</a></p>
+            </div>
+
+            <a href="https://github.com/EkeminiMichaelUseh/MelanomaEDAUsingR" target="_blank">
+                <p class="repo">Github Repository</p>
+            </a>
+        </div>
+
+        <div class="proj_intro">
+            <div class="into_writeup">
+                <p class="title">Exploratory Data Analysis of<br>
+                    "Survival from malignant melanoma" Dataset 
+                    <span>(By Ekemini Useh)</span>
+                </p>
+                <div class="description">
+                    <p class="executive_summary">Introduction</p>
+                    <p>One type of skin cancer that is mostly brought 
+                        on by UV rays from the sun is called melanoma. 
+                        Because human skin is exposed to this dangerous 
+                        beam daily, further research is important. 
+                        This report's purposes are to:<br>
+                        Ascertain the data's summary statistics.<br>
+                        Analyze the variables using correlation and regression.<br>
+                        To ascertain whether a patient's sex has an impact on the prevalence of melanoma by a two-sample significance test grouped by patient sex.<br> 
+                        The percentage of malignant melanoma patients who survive after surgery to remove their tumors.
+                        </p>
+                    <p>Please click <a href="https://github.com/EkeminiMichaelUseh/MelanomaEDAUsingR?tab=readme-ov-file" class="cta" target="_blank">here</a> to see the full documentation on github.</p>
+                </div>
+            </div>
+            <img src="" alt="" class="dashboard">
+        </div>
+    </section>
+
+    <section id="data">
+        <div class="description">
+            <p class="executive_summary">About Data</p>
+            <div class="data_sub">
+                <p class="sub_topic">Data Source / Description</p>
+                <p>The dataset is the measurements recorded on 
+                    205 patients with malignant melanoma whose 
+                    tumors were removed at the Department of 
+                    Plastic Surgery, University Hospital of Odense, 
+                    Denmark, between 1962 and 1977. The data collected 
+                    were survival time, patient’s status, sex, age, year 
+                    of surgery, thickness of tumor, 
+                    and ulcer (if tumor was ulcerated).</p>
+            </div>
+
+            <div class="data_sub">
+                <p class="sub_topic">Data Cleaning and Preparation</p>
+                <p>The tool used for data cleaning and preparation is R</p>
+                <p>
+                    <span class="steps">Steps Taken</span><br>
+                    <span class="points">-</span> The less important column was removed.<br>
+                    <span class="points">-</span> The data types of variables status, sex, year, and ulcer were changed
+                    from double to factor.<br>
+                    <span class="points">-</span> The values in status, sex, and ulcer were represented 
+                    in numbers, the labels were changed 
+                    to the actual inputs for easy data exploration.<br>
+                    <span class="points">-</span> Null values were checked but there was none.
+                </p>
+            </div>
+        </div>
+        <!-- <img src="" alt="" class="desc_pic"> -->
+    </section>
+
+    <section id="eda">
+        <div class="description">
+            <p class="executive_summary">Exploratory Data Analysis (EDA)</p>
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Summary statistics</p>
+                    <img src="images/summary.png" alt="" class="summary_pic">
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Pariatur cumque tempora 
+                        natus voluptas.</p> -->
+                </div>
+                <!-- <img src="images/summary.png" alt="" class="desc_pic"> -->
+            </div>
+
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Using plots and charts to summarize each variable</p>
+                    <div class="diagrams">
+                        <img src="images/time_box.png" alt="" class="desc_pic">
+                        <img src="images/time_hist.png" alt="" class="desc_pic">
+                        <img src="images/status.png" alt="" class="desc_pic">
+                        <img src="images/sex.png" alt="" class="desc_pic">
+                        <img src="images/age_box.png" alt="" class="desc_pic">
+                        <img src="images/age_hist.png" alt="" class="desc_pic">
+                        <img src="images/year.png" alt="" class="desc_pic">
+                        <img src="images/thickness_box.png" alt="" class="desc_pic">
+                        <img src="images/thickness_hist.png" alt="" class="desc_pic">
+                        <img src="images/ulcer.png" alt="" class="desc_pic">
+
+                        <table>
+                            <caption>Comparing the tumor thickness based on the presence of ulcerations</caption>
+                            <tr bgcolor="gray">
+                                <th>Summary statistics</th>
+                                <th>Ulcerations Present</th>
+                                <th>Ulcerations Absent</th>
+                            </tr>
+                            <tr bgcolor="lightgray">
+                                <td>Min</td>
+                                <td>0.160</td>
+                                <td>0.100</td>
+                            </tr>
+                            <tr>
+                                <td>1st Quatile</td>
+                                <td>2.245</td>
+                                <td>0.650</td>
+                            </tr>
+                            <tr bgcolor="lightgray">
+                                <td>Median</td>
+                                <td>3.540</td>
+                                <td>1.290</td>
+                            </tr>
+                            <tr>
+                                <td>Mean</td>
+                                <td>4.336</td>
+                                <td>1.811</td>
+                            </tr>
+                            <tr bgcolor="lightgray">
+                                <td>3rd Quartile</td>
+                                <td>5.160</td>
+                                <td>1.940</td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>17.420</td>
+                                <td>14.660</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="summary_figures">
+                    <p><span class="steps">Time</span><br>
+                        Based on the time summary statistics, 
+                        the minimum number of days survived 
+                        since the procedure is 10. The most days 
+                        that have passed after the procedure is 5565. 
+                        First quartile equals 1525 days. 3042 days is 
+                        the third quartile. 2005 days is the median. 
+                        Average (days survived on average) = 2152.8, or 
+                        2153 days. There is an anomaly in the time variable, 
+                        as seen by the box plot. The histogram shows this to 
+                        be equally true. This anomaly is most likely the largest 
+                        value of time that has previously been recorded in the time 
+                        summary data, which is 5565 days. With modes at roughly 750 
+                        days, 1750 days, and 3250 days, the histogram is multimodal. 
+                        A normal distribution does not exist.
+                    </p>
+
+                    <p><span class="steps">Status</span><br>
+                        The status variable has a factor type and is 
+                        categorical. As a result, the total observations 
+                        for each category make up the summary. 
+                        There have been 57 deaths worldwide due to melanoma. 
+                        There are 134 people still living. There have been fourteen 
+                        deaths overall from causes unrelated to their melanoma.
+                    </p>
+
+                    <p><span class="steps">Sex</span><br>
+                        The data type for this variable is "factor", 
+                        making it categorical. The total for each category 
+                        is thus the summary statistics. 126 females and 79 males
+                    </p>
+
+                    <p><span class="steps">Age</span><br>
+                        An outlier has been identified in the age summary 
+                        statistics, with a minimum value of 4 years. 
+                        The average age is almost 56 years old. 
+                        Minimum age = 4 years, according to the age summary 
+                        statistics. 95 years old is the maximum age. 
+                        42 years is the first quartile. Third Quartile: 65 years old. The patient's middle age, or median age, 
+                        is 54 years old. 52 years is the average (mean).
+                    </p>
+
+                    <p><span class="steps">Year</span><br>
+                        According to this record, the greatest 
+                        number of melanoma surgery (41 total) were 
+                        performed in 1972. There were no records of 
+                        melanoma surgeries in 1963, 1975, or 1976.
+                    </p>
+
+                    <p><span class="steps">Thickness</span><br>
+                        Outliers are present in the data on tumor 
+                        thickness. The smallest tumor thickness 
+                        (Minimum thickness) = 0.10 mm. 
+                        1st Quartile = 0.97 mm. 3rd Quartile = 3.56 mm. 
+                        Median (Middle thickness) = 1.94 mm. Average tumor 
+                        thickness (Mean) = 2.92 mm. The presence of outliers 
+                        makes the maximum thickness 17.42 mm. Using a boxplot, 
+                        the maximum is seen to be approximately 7.50 mm. 
+                        The variance of tumor thickness = 8.758242. 
+                        The standard deviation of thickness = 2.959433
+                    </p>
+
+                    <p><span class="steps">Ulcer</span><br>
+                        out of the total patients operated on (205), 
+                        those with ulcerations absent were more in number 
+                        than those with ulcerations. Ulcer is a categorical 
+                        variable with 'factor' as the data type. Therefore, 
+                        each category's total number of observations is computed as summary statistics. 
+                        Tumor ulcerations absent = 115, Tumor ulcerations present = 90
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section id="modev">
+        <div class="description">
+            <p class="executive_summary">Correlation and Regression Analysis,<br>Two-sample T-test grouped by sex</p>
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Time ~ Thickness</p>
+                    <img src="images/scatter_time_thickness.png" alt="" class="desc_pic">
+                    <img src="images/model1.png" alt="" class="desc_pic">
+                    <p>
+                        Using Pearson’s correlation, the relationship has a 
+                        weak negative correlation of -0.2354087. This means 
+                        as the tumor thickness gets bigger, 
+                        the smaller the survival time a patient lives after the procedure.<br><br>
+                        
+                        The line of best fit is: time = 2413.41 – 89.25 thickness here, 
+                        the y-intercept is 2413.41 when the thickness is 
+                        equal to zero. The gradient is -89.25. For every 
+                        unit increase in the value of thickness, time is 
+                        predicted to decrease by 89.25, on average. 
+                        The residual standard error is 1093 and the 
+                        R-squared is 0.05542. Due to the unreliability 
+                        of this model, using it for any predictive 
+                        analysis of the relationship should be done with 
+                        caution.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="sub_topic">Time ~ Age</p>
+                    <img src="images/time_age.png" alt="" class="desc_pic">
+                    <img src="images/model2.png" alt="" class="desc_pic">
+                    <p>
+                        The relationship has a weak negative correlation 
+                        of -0.3015179. This means that as age increases, 
+                        a patient lives fewer days after the operation.<br><br>
+                        
+                        The line of best fit is: time = 3217.45 – 20.29 age 
+                        here, the y-intercept is 3217.45 when the age is 
+                        equal to zero. The gradient is -20.29. For every 
+                        unit increase in the value of age, time is 
+                        predicted to decrease by 20.29, on average. 
+                        The residual standard error is 1072 and the 
+                        R-squared is 0.09091. Due to the unreliability 
+                        of this model, using it for any predictive analysis 
+                        of the relationship should be done with caution.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="sub_topic">Thickness ~ Age</p>
+                    <img src="images/age_thick.png" alt="" class="desc_pic">
+                    <img src="images/model3.png" alt="" class="desc_pic">
+                    <p>
+                        The relationship is a weak positive correlation of 0.2124798. This means as 
+                        the age increases, the bigger the tumor thickness.<br><br>
+                        
+                        The line of best fit is: thickness = 0.94105 + 0.03772 age 
+                        here, the y-intercept is 0.94105 when the age is 
+                        equal to zero. The gradient is 0.03772. For every unit 
+                        increase in the value of age value, thickness is predicted 
+                        to increase by 0.03772, on average. The residual standard 
+                        error is 2.899 and the R-squared is 0.04515. Due to the 
+                        unreliability of this model, using it for any predictive analysis 
+                        of the relationship should be done with caution.
+                    </p>
+                </div>
+                <img src="" alt="" class="desc_pic">
+            </div>
+
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Time grouped by sex</p>
+                    <p>Ho: The mean survival time after the operation is the same for both sexes</p><br>
+                     <p>H1: The mean survival time after the operation is different in both sexes.</p>
+                    <img src="images/test1.png" alt="" class="desc_pic">
+                    <p>The p-value = 0.03868 which is smaller than α = 0.05. 
+                        Therefore, we can reject Ho and conclude that 
+                        there is evidence that the true mean survival 
+                        time after the operation is different 
+                        depending on whether the patient is male or female.</p>
+                </div>
+                <img src="images/test_read1.png" alt="" class="desc_pic">
+            </div>
+
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Thickness grouped by sex</p>
+                    <p>Ho: The mean thickness of the tumor is the same for both sexes</p>
+                    <p>H1: The mean thickness of the tumor is different in both sexes.</p>
+                    <img src="images/test2.png" alt="" class="desc_pic">
+                    <p>The p-value = 0.01009 which is smaller than α = 0.05. 
+                        Therefore, we can reject Ho and conclude that 
+                        there is evidence that the true mean thickness 
+                        of the tumor is different 
+                        depending on whether the patient is male or female.</p>
+                </div>
+                <img src="images/test_read2.png" alt="" class="desc_pic">
+            </div>
+
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Age grouped by sex</p>
+                    <p>Ho: The mean age of the patients is the same in both sexes</p>
+                    <p>H1: The mean age of the patients is different depending in both sexes.</p>
+                    <img src="images/test3.png" alt="" class="desc_pic">
+                    <p>The p-value = 0.3408 which is greater than α = 0.05. 
+                        Therefore, we cannot reject Ho. We can conclude that 
+                        there is evidence that the true 
+                        mean age of patients is the same in male and female.</p>
+                </div>
+                <img src="images/test_read3.png" alt="" class="desc_pic">
+            </div>
+        </div>    
+    </section>
+
+    <section id="resultdis">
+        <div class="description">
+            <p class="executive_summary">Observations</p>
+            <div class="data_sub eda">
+                <div class="result">
+                    <div class="plot_explain">
+                        <!-- <p class="discovery_topic">Relationship between tumor thickness 
+                            and alcerations.
+                        </p> -->
+                        <p><span class="points">-</span> The findings gathered from the data show that 
+                            malignant melanoma is likely to have ulcerations 
+                            present depending on its tumor thickness.</p>
+
+                        <p><span class="points">-</span> Less people are probably going to die from their 
+                            melanoma because more people live after having their cancer removed.</p>
+                        
+                        <p><span class="points">-</span> When melanoma tumors ulcerate because of their increased thickness, 
+                            the chance of death from the disease raises.</p>
+                    </div>
+                    <!-- <div class="plot">
+                        <p class="sub_topic plot_title">Plot 1</p>
+                        <img src="" alt="" class="desc_pic">
+                    </div> -->
+                </div>
+                
+                <div>
+                    <!-- <div class="plot_explain">
+                        <p class="discovery_topic">Discovery 2</p>
+                        <p>Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Reiciendis, praesentium!</p>
+                    </div> -->
+                    <!-- <div class="plot">
+                        <p class="sub_topic plot_title">Plot 2</p>
+                        <img src="" alt="" class="desc_pic">
+                    </div> -->
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section id="recolim">
+        <div class="description">
+            <p class="executive_summary">Recommendations, Conclusion, and Limitations</p>
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Recommendations</p>
+                    <p>People need to seek proper medical care and 
+                        advice at the sight of any skin infection as 
+                        it could be melanoma. This will hinder the growth 
+                        and spread of such infection. The possibility of ulceration, if detected early, will 
+                        decrease and cured without the risk of fatality.</p>
+                </div>
+            </div>
+
+            <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Conclusion</p>
+                    <p><span class="points">-</span> Melanoma is not fata when detected early.</p>
+                    <p><span class="points">-</span> The relationship between survival 
+                    time and tumor thickness is a weak negative correlation. The smaller the 
+                    tumor thickness, the higher the survival time afetr surgery.</p>
+                    <p><span class="points">-</span> Time and age had a weak negative correlation. 
+                        The patient's survival time following melanoma removal decreases with age.</p>
+                    <p><span class="points">-</span> A weak positive association exists between age 
+                        and thickness. A larger tumor was possible in the elderly people.</p>
+                </div>
+            </div>
+
+            <!-- <div class="data_sub eda">
+                <div>
+                    <p class="sub_topic">Limitations</p>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Pariatur cumque tempora 
+                        natus voluptas.</p>
+                </div>
+            </div> -->
+        </div>    
+    </section>
+
+    <section id="reference">
+        <div class="description">
+            <p class="executive_summary">References</p>
+            <div class="data_sub eda">
+                <div>
+                    <p><span class="points">-</span> R Core Team. 2020. R: A language and environment for statistics computing. R Foundation for Statistical Computing, 
+                        Vienna, Austria. <a href="https://www.R-project.org" class="cta" target="_blank">Click here</a>.</p>
+                    <p><span class="points">-</span> Arnold, Jeffrey B. 2021. “Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’.” <a href="https://CRAN.R-project.org/package=ggthemes" class="cta" target="_blank">Click here</a>.</p>
+                    <p><span class="points">-</span> Deanna L. 2020. “Basic R Guide for NSC Statistics.” <a href="https://bookdown.org/dli/rguide/r-and-rstudio.html" class="cta" target="_blank">Click here</a>.</p>
+                    <p><span class="points">-</span> Wickham, Hadley. 2016. “Ggplot2: Elegant Graphics for Data Analysis.” <a href="https://ggplot2.tidyverse.org" class="cta" target="_blank">Click here</a>.</p>
+                    <p><span class="points">-</span> Wickham Hadley, Çetinkaya-Rundel Mine, Grolemund Garrett. “R for Data Science (2e).” <a href="https://r4ds.hadley.nz/" class="cta" target="_blank">Click here</a>.</p>
+                    <p><span class="points">-</span> Wickham Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. 
+                        “Welcome to the Tidyverse” 4: 1686. <a href="https://doi.org/10.21105/joss.01686" class="cta" target="_blank">Click here</a>.</p>
+                </div>
+                <!-- <div>
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Pariatur cumque tempora 
+                        natus voluptas.</p>
+                </div> -->
+            </div>    
+    </section>
+
+    <div class="copyright">
+        <p>&#169 2024 Ekemini Useh</p>
+    </div>
+
+
+
+
+    <script src="jscript.js"></script>
 </body>
 </html>

@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Roboto", sans-serif;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    /* display: none; */
+}
+::-webkit-scrollbar-track{
+    background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb{
+    background: #6e6eb054;
+    border-radius: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url(images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#introduction{
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+.navigate{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    /* position: relative; */
+    background: #f5f5f5;
+}
+.navigate a{
+    text-decoration: none;
+    color: #000000;
+}
+.back_to_home img{
+    width: 15px;
+}
+.toc_head{
+    font-weight: bold;
+    cursor: pointer;
+}
+.toc{
+    width: 200px;
+    border-top: 1px solid #000000;
+    padding: 20px 0;
+    background: #f5f5f591;
+    backdrop-filter: blur(5px);
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    transition: 0.3s;
+    left: -200px;
+}
+.repo{
+    color: #2b2bd1;
+    font-weight: bold;
+    cursor: pointer;
+}
+.toc img{
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.toc p{
+    margin-bottom: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+.toc p:hover{
+    border: 1px solid #808080;
+}
+/* .burger{
+    right: 1em;
+    top: 1em;
+    z-index: 60;
+}
+.close-burger{
+    right: 1em;
+    top: 1em;
+} */
+.proj_intro{
+    width: 100%;
+    background: #f5f5f591;
+    backdrop-filter: blur(5px);
+}
+.into_writeup{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d1d97;
+}
+.title span{
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+}
+.cta{
+    padding: 10px;
+    text-decoration: none;
+    color: #2b2bd1;
+}
+.dashboard{
+    width: 100%;
+    height: 250px;
+    background: gray;
+    object-fit: cover;
+}
+.description{
+    padding: 20px 0;
+}
+.description .problem_statement,
+.description .executive_summary{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.description p{
+    line-height: 25px;
+}
+#data, #eda, #modev, #resultdis, #recolim, #reference{
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    background: #f5f5f591;
+    backdrop-filter: blur(5px);
+    margin-bottom: 40px;
+}
+.sub_topic, .plot_title, .discovery_topic, caption{
+    font-size: 13px;
+    font-weight: bold;
+}
+.data_sub{
+    margin-bottom: 20px;
+}
+.steps{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+.points{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+}
+.desc_pic{
+    width: 400px;
+    /* height: 150px; */
+    background: gray;
+    object-fit: cover;
+    margin-left: 30px;
+}
+.eda img, .summary_pic{
+    margin-top: 20px;
+}
+.summary_pic{
+    width: 100%;
+}
+.summary_figures p{
+    margin-bottom: 20px; margin-top: 20px;
+}
+.diagrams{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.result{
+    margin-bottom: 20px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    background: #f5f5f5;
+    padding: 50px;
+}
+th, td{
+    padding: 10px;
+}
+
+@media screen and (min-width: 1000px){
+    #data,
+    #eda, #modev, #resultdis,
+    #recolim, #reference{
+        padding: 50px 100px;
+        text-align: left;
+        display: flex;
+    }
+    .proj_intro{
+        display: flex;
+    }
+    .into_writeup{
+        padding: 50px;
+        text-align: left;
+    }
+    .dashboard{
+        width: 500px;
+        height: 70vh;
+        margin-top: 80px;
+    }
+    .eda{
+        display: flex;
+        gap: 50px;
+        padding: 0 0 50px 0;
+        border-bottom: 1px solid #00000084;
+    }
+}
+@media screen and (min-width: 1200px){
+    .navigate{
+        padding: 20px 150px;
+    }
+    .into_writeup{
+        padding: 100px;
+    }
+    .dashboard{
+        width: 50vw;
+    }
+    .title{
+        font-size: 30px;
+        border-bottom: 1px solid #00000084;
+    }
+    #data,
+    #eda, #modev, #resultdis,
+    #recolim, #reference{
+        padding: 150px;
+        justify-content: center;
+    }
+    .description .problem_statement,
+    .description .executive_summary{
+        font-size: 30px;
+    }
+    .sub_topic{
+        font-size: 20px;
+    }
+    #reference .description .eda{
+        display: unset;
+    }
+    #reference .description .eda div{
+        margin-bottom: 20px;
+        border-bottom: 1px solid #00000084;
+    }
+    .discovery_topic{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #resultdis .data_sub{
+        display: unset;
+    }
+    .plot_title{
+        font-size: 13px;
+    }
+}
