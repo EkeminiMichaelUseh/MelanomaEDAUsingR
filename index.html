@@ -45,7 +45,7 @@
                 </p>
                 <div class="description">
                     <p class="executive_summary">Introduction</p>
-                    <p>One type of skin cancer that is mostly brought 
+                    <p id="move_left">One type of skin cancer that is mostly brought 
                         on by UV rays from the sun is called melanoma. 
                         Because human skin is exposed to this dangerous 
                         beam daily, further research is important. 
@@ -67,7 +67,7 @@
             <p class="executive_summary">About Data</p>
             <div class="data_sub">
                 <p class="sub_topic">Data Source / Description</p>
-                <p>The dataset is the measurements recorded on 
+                <p id="move_left">The dataset is the measurements recorded on 
                     205 patients with malignant melanoma whose 
                     tumors were removed at the Department of 
                     Plastic Surgery, University Hospital of Odense, 
@@ -81,13 +81,15 @@
                 <p class="sub_topic">Data Cleaning and Preparation</p>
                 <p>The tool used for data cleaning and preparation is R</p>
                 <p><span class="steps">Steps Taken</span></p><br>
-                <p><span class="points">-</span> The less important column was removed.</p><br>
-                <p><span class="points">-</span> The data types of variables status, sex, year, and ulcer were changed
-                    from double to factor.</p><br>
-                <p><span class="points">-</span> The values in status, sex, and ulcer were represented 
-                    in numbers, the labels were changed 
-                    to the actual inputs for easy data exploration.</p><br>
-                <p><span class="points">-</span> Null values were checked but there was none.</p>   
+                <div id="move_left">
+                    <p><span class="points">-</span> The less important column was removed.</p><br>
+                    <p><span class="points">-</span> The data types of variables status, sex, year, and ulcer were changed
+                        from double to factor.</p><br>
+                    <p><span class="points">-</span> The values in status, sex, and ulcer were represented 
+                        in numbers, the labels were changed 
+                        to the actual inputs for easy data exploration.</p><br>
+                    <p><span class="points">-</span> Null values were checked but there was none.</p>
+                </div>   
             </div>
         </div>
         <!-- <img src="" alt="" class="desc_pic"> -->
@@ -97,8 +99,8 @@
         <div class="description">
             <p class="executive_summary">Exploratory Data Analysis (EDA) & Statistical Analysis</p>
             
-            <div class="data_sub">
-                <p><span class="sub_topic">Steps Taken</span></p><br>
+            <p><span class="sub_topic">Steps Taken</span></p><br>
+            <div class="data_sub" id="move_left">
                 <p><span class="points">-</span> Summary statistics of the variables.</p><br>
                 <p><span class="points">-</span> Graphical summaries to further explain the statistics visually (Charts, graphs, and plots).</p><br>
                 <p><span class="points">-</span> Regression analysis and correlation computations.</p><br>
@@ -113,7 +115,7 @@
             <p class="executive_summary">Observations</p>
             <div class="data_sub eda">
                 <div class="result">
-                    <div class="plot_explain">
+                    <div class="plot_explain" id="move_left">
                         <!-- <p class="discovery_topic">Relationship between tumor thickness 
                             and alcerations.
                         </p> -->
@@ -152,8 +154,8 @@
         <div class="description">
             <p class="executive_summary">Recommendations, Conclusion, and Limitations</p>
             <div class="data_sub eda">
-                <div>
-                    <p class="sub_topic">Recommendations</p>
+                <p class="sub_topic">Recommendations</p>
+                <div id="move_left">
                     <p>People need to seek proper medical care and 
                         advice at the sight of any skin infection as 
                         it could be melanoma. This will hinder the growth 
@@ -163,8 +165,8 @@
             </div>
 
             <div class="data_sub eda">
-                <div>
-                    <p class="sub_topic">Conclusion</p>
+                <p class="sub_topic">Conclusion</p>
+                <div id="move_left">
                     <p><span class="points">-</span> Melanoma is not fata when detected early.</p>
                     <p><span class="points">-</span> The relationship between survival 
                     time and tumor thickness is a weak negative correlation. The smaller the 
@@ -191,7 +193,7 @@
         <div class="description">
             <p class="executive_summary">References</p>
             <div class="data_sub eda">
-                <div>
+                <div id="move_left">
                     <p><span class="points">-</span> R Core Team. 2020. R: A language and environment for statistics computing. R Foundation for Statistical Computing, 
                         Vienna, Austria. <a href="https://www.R-project.org" class="cta" target="_blank">Click here</a>.</p>
                     <p><span class="points">-</span> Arnold, Jeffrey B. 2021. “Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’.” <a href="https://CRAN.R-project.org/package=ggthemes" class="cta" target="_blank">Click here</a>.</p>
