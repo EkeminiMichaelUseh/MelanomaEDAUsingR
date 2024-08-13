@@ -161,11 +161,11 @@ body{
     color: #000000;
 }
 .desc_pic{
-    width: 400px;
+    width: 100%;
     /* height: 150px; */
     background: gray;
     object-fit: cover;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .eda{
     width: 100%;
@@ -199,6 +199,11 @@ th, td{
     padding: 10px;
 }
 
+@media screen and (min-width: 600px){
+    .desc_pic{
+        width: 400px;
+    }
+}
 @media screen and (min-width: 1000px){
     #data,
     #eda, #modev, #resultdis,
@@ -227,6 +232,9 @@ th, td{
     }
     .eda img, .summary_pic{
         width: 60%;
+    }
+    .desc_pic{
+        width: 400px;
     }
 }
 @media screen and (min-width: 1200px){
