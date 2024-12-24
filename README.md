@@ -7,6 +7,7 @@
 - [Correlation and Regression Analysis](#correlation-and-regression-analysis)
 - [Two sample significance test grouped by sex](#two-sample-significance-test-grouped-by-sex)
 - [Observations](#observations)
+- [Conclusions](#conclusions)
 - [Recommendations](#recommendations)
 - [References](#references)
 ## Introduction
@@ -345,6 +346,9 @@ The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot rejec
 
 - More people survive after getting their melanoma removed which means that fewer people are likely   going to die due to their melanoma.
 - The risk of dying from melanoma increases when the tumor becomes ulcerated due to the increase in thickness of the tumor.
+
+## Conclusions
+
 
 ## Recommendations
 People need to seek proper medical care and advice at the sight of any skin infection as it could be melanoma. This will hinder the growth and spread of such infection. The possibility of ulceration, if detected early, will decrease and cured without the risk of fatality.
