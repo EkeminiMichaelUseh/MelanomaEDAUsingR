@@ -4,9 +4,9 @@
 - [Introduction](#introduction)
 - [Data cleaning](#data-cleaning)
 - [Summary statistics](#summary-statistics)
-- [Correlation and Regression Analysis](#correlation-and-regression-analysis)
-- [Two sample significance test grouped by sex](#two-sample-significance-test-grouped-by-sex)
-- [Observations](#observations)
+  - [Correlation and Regression Analysis](#correlation-and-regression-analysis)
+  - [Two sample significance test grouped by sex](#two-sample-significance-test-grouped-by-sex)
+  - [Comparing Tumor Ulcerations with Tumor Thickness](#comparing-tumor-ulcerations-with-tumor-thickness)
 - [Conclusions](#conclusions)
 - [Recommendations](#recommendations)
 - [References](#references)
@@ -331,7 +331,7 @@ t.test(melanoma_df$age ~ melanoma_df$sex)
 
 The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot reject Ho. We can conclude that there is evidence that the true mean age of patients is the same in male and female.
 
-## Observations
+## Comparing Tumor Ulcerations with Tumor Thickness
 - The findings gathered from the data show that malignant melanoma is likely to have ulcerations present depending on its tumor thickness. This implies that a larger tumor thickness is likely ulcerated. The following summary statistics show this:
 
   A table to compare their outcomes
@@ -348,11 +348,23 @@ The p-value = 0.3408 which is greater than α = 0.05. Therefore, we cannot rejec
 - The risk of dying from melanoma increases when the tumor becomes ulcerated due to the increase in thickness of the tumor.
 
 ## Conclusions
-
+The exploratory data analysis on survival from malignant melanoma provides valuable insights into the relationships between clinical variables and survival outcomes. The analysis highlights several important findings:
+#### Survival Outcomes:
+- Although the majority of patients recovered after surgery, a sizable fraction still passed away from melanoma or other unrelated reasons.
+#### Demographic and Clinical Characteristics:
+- The summary statistics reveal that more female patients underwent tumor removal compared to male patients.
+- The analysis reveals that older patients generally exhibited shorter survival times after their operations and were associated with increased tumor thickness,   suggesting age as a potential factor influencing both survival outcomes and tumor characteristics.
+#### Tumor Features:
+- Patients with thicker tumors were likely found to have shorter survival times, highlighting that tumor thickness may be a factor in predicting outcomes.
+- The presence of ulceration was associated with increased tumor thickness, which aligns with its status as a marker of more aggressive disease.
 
 ## Recommendations
-People need to seek proper medical care and advice at the sight of any skin infection as it could be melanoma. This will hinder the growth and spread of such infection. The possibility of ulceration, if detected early, will decrease and cured without the risk of fatality.
-
+- Efforts should prioritize early detection and management of tumors before they reach greater thickness or develop ulcerations. This may involve improved public awareness campaigns and more accessible screening programs.
+- Further investigation is needed into the biological and sociological factors behind the observed gender disparities in tumor thickness and survival. Tailored interventions for female patients may be beneficial.
+- Given the relationship between age, tumor thickness, and survival, older patients may benefit from more aggressive monitoring and tailored therapeutic approaches.
+- Outliers in survival time and age highlight the need for individualized treatment plans. Investigating cases with exceptionally long or short survival times could reveal actionable insights.
+- Future research should incorporate additional variables such as genetic markers, comorbidities, and treatment types, to improve predictive accuracy for survival outcomes.
+- Incorporating larger, more diverse datasets and validating findings across multiple institutions can enhance the generalizability and reliability of these results.
 ## References
 - R Core Team. 2020. R: A language and environment for statistics computing. R Foundation for Statistical Computing, Vienna, Austria. “https://www.R-project.org.
 - Arnold, Jeffrey B. 2021. “Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’.” https://CRAN.R-project.org/package=ggthemes.
